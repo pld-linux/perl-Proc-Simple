@@ -43,7 +43,7 @@ Proc::Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
