@@ -3,7 +3,7 @@ Summary:	Proc-Simple perl module
 Summary(pl):	Modu³ perla Proc-Simple
 Name:		perl-Proc-Simple
 Version:	1.18
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
