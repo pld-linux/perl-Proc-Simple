@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Proc
 %define	pnam	Simple
-Summary:	Proc-Simple perl module
-Summary(pl):	Modu³ perla Proc-Simple
+Summary:	Proc::Simple perl module
+Summary(pl):	Modu³ perla Proc::Simple
 Name:		perl-Proc-Simple
 Version:	1.19
 Release:	4
@@ -16,10 +16,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Proc-Simple - launch and control background processes.
+Proc::Simple - launch and control background processes.
 
 %description -l pl
-Proc-Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
+Proc::Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
