@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Proc
 %define	pnam	Simple
-%include	/usr/lib/rpm/macros.perl
 Summary:	Proc-Simple perl module
 Summary(pl):	Modu³ perla Proc-Simple
 Name:		perl-Proc-Simple
 Version:	1.19
-Release:	3
-
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -23,7 +22,7 @@ Proc-Simple - launch and control background processes.
 Proc-Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
 
 %prep
-%setup -q -n Proc-Simple-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -p0
 
 %build
