@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Proc
-%define		pnam	Simple
+%define	pdir	Proc
+%define	pnam	Simple
 Summary:	Proc::Simple Perl module - launch and control background processes
 Summary(pl):	Modu³ Perla Proc::Simple - uruchamianie i sterowanie procesami w tle
 Name:		perl-Proc-Simple
