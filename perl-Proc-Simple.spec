@@ -9,7 +9,7 @@ Summary:	Proc::Simple Perl module - launch and control background processes
 Summary(pl):	Modu³ Perla Proc::Simple - uruchamianie i sterowanie procesami w tle
 Name:		perl-Proc-Simple
 Version:	1.19
-Release:	7
+Release:	8
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
