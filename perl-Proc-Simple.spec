@@ -27,7 +27,7 @@ Proc-Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
 
 %build
 perl Makefile.PL
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
