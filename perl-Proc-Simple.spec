@@ -20,12 +20,12 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Proc::Simple
 Summary(zh_CN):	Proc::Simple Perl Ä£¿é
 Name:		perl-Proc-Simple
 Version:	1.19
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,7 +41,8 @@ Proc::Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
 %patch -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -58,10 +59,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%{perl_sitelib}/Proc/Simple.pm
-%dir %{perl_sitelib}/auto/Proc
-%dir %{perl_sitelib}/auto/Proc/Simple
-%{perl_sitelib}/auto/Proc/Simple/autosplit.ix
+%{perl_vendorlib}/Proc/Simple.pm
+%dir %{perl_vendorlib}/auto/Proc
+%dir %{perl_vendorlib}/auto/Proc/Simple
+%{perl_vendorlib}/auto/Proc/Simple/autosplit.ix
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
