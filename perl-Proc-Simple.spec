@@ -2,9 +2,9 @@
 Summary:	Proc-Simple perl module
 Summary(pl):	Modu³ perla Proc-Simple
 Name:		perl-Proc-Simple
-Version:	1.13
-Release:	3
-Copyright:	GPL
+Version:	1.14
+Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Proc/Proc-Simple-%{version}.tar.gz
