@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl Proc::Simple
 Summary(zh_CN):	Proc::Simple Perl дё©И
 Name:		perl-Proc-Simple
 Version:	1.19
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
