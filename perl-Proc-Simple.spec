@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl Proc::Simple
 Summary(zh_CN):	Proc::Simple Perl дё©И
 Name:		perl-Proc-Simple
 Version:	1.19
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -59,6 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %{perl_sitelib}/Proc/Simple.pm
+%dir %{perl_sitelib}/auto/Proc
+%dir %{perl_sitelib}/auto/Proc/Simple
+%{perl_sitelib}/auto/Proc/Simple/autosplit.ix
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
