@@ -1,0 +1,8 @@
+--- eg/parproc.pl~	Mon Feb 22 02:57:49 1999
++++ eg/parproc.pl	Sun Oct 17 23:57:28 1999
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ ######################################################################
+ # parproc.pl -- Sample script, runs 10 jobs, 5 at a time.
+ #
