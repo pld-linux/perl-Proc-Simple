@@ -1,23 +1,12 @@
+#
+# Conditional build:
+%bcond_without	tests	# don't perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Proc
 %define		pnam	Simple
-Summary:	Proc::Simple Perl module
-Summary(cs):	Modul Proc::Simple pro Perl
-Summary(da):	Perlmodul Proc::Simple
-Summary(de):	Proc::Simple Perl Modul
-Summary(es):	Módulo de Perl Proc::Simple
-Summary(fr):	Module Perl Proc::Simple
-Summary(it):	Modulo di Perl Proc::Simple
-Summary(ja):	Proc::Simple Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Proc::Simple ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Proc::Simple
-Summary(pl):	Modu³ Perla Proc::Simple
-Summary(pt):	Módulo de Perl Proc::Simple
-Summary(pt_BR):	Módulo Perl Proc::Simple
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Proc::Simple
-Summary(sv):	Proc::Simple Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Proc::Simple
-Summary(zh_CN):	Proc::Simple Perl Ä£¿é
+Summary:	Proc::Simple Perl module - launch and control background processes
+Summary(pl):	Modu³ Perla Proc::Simple - uruchamianie i sterowanie procesami w tle
 Name:		perl-Proc-Simple
 Version:	1.19
 Release:	7
@@ -26,16 +15,20 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f84fe9aace707965ee68d3fab3409fbe
 Patch0:		%{name}-paths.patch
+BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-devel >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Proc::Simple - launch and control background processes.
+Proc::Simple is the module to launch and control background processes.
+It provides objects mimicing real-life processes from a user's point
+of view.
 
 %description -l pl
-Proc::Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
+Proc::Simple to modu³ umo¿liwiaj±cy uruchamianie i kontrolowanie
+procesów w tle. Dostarcza obiekty na¶laduj±ce prawdziwe procesy z
+punktu widzenia u¿ytkownika.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -46,11 +39,14 @@ Proc::Simple - umo¿liwia uruchamianie i kontrolowanie procesów w tle.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 cp -f eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
