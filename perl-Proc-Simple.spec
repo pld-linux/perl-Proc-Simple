@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Proc
-%define	pnam	Simple
-Summary:	Proc::Simple perl module
-Summary(pl):	Modu³ perla Proc::Simple
+%define		pdir	Proc
+%define		pnam	Simple
+Summary:	Proc::Simple Perl module
+Summary(cs):	Modul Proc::Simple pro Perl
+Summary(da):	Perlmodul Proc::Simple
+Summary(de):	Proc::Simple Perl Modul
+Summary(es):	Módulo de Perl Proc::Simple
+Summary(fr):	Module Perl Proc::Simple
+Summary(it):	Modulo di Perl Proc::Simple
+Summary(ja):	Proc::Simple Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Proc::Simple ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul Proc::Simple
+Summary(pl):	Modu³ Perla Proc::Simple
+Summary(pt):	Módulo de Perl Proc::Simple
+Summary(pt_BR):	Módulo Perl Proc::Simple
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Proc::Simple
+Summary(sv):	Proc::Simple Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Proc::Simple
+Summary(zh_CN):	Proc::Simple Perl Ä£¿é
 Name:		perl-Proc-Simple
 Version:	1.19
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -31,17 +46,19 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README
+cp -f eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz eg
+%doc README
 %{perl_sitelib}/Proc/Simple.pm
-%{perl_sitelib}/auto/Proc/Simple
 %{_mandir}/man3/*
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
