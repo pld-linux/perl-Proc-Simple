@@ -6,7 +6,7 @@
 %define		pdir	Proc
 %define		pnam	Simple
 Summary:	Proc::Simple Perl module - launch and control background processes
-Summary(pl.UTF-8):   Moduł Perla Proc::Simple - uruchamianie i sterowanie procesami w tle
+Summary(pl.UTF-8):	Moduł Perla Proc::Simple - uruchamianie i sterowanie procesami w tle
 Name:		perl-Proc-Simple
 Version:	1.21
 Release:	1
