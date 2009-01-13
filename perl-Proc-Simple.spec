@@ -8,13 +8,13 @@
 Summary:	Proc::Simple Perl module - launch and control background processes
 Summary(pl.UTF-8):	Moduł Perla Proc::Simple - uruchamianie i sterowanie procesami w tle
 Name:		perl-Proc-Simple
-Version:	1.22
+Version:	1.23
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Proc/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2c7d98f9c0002b607e3ba504599aa69f
+# Source0-md5:	8d2dd47a1dfea138f41342df88b81ef6
 Patch0:		%{name}-paths.patch
 URL:		http://search.cpan.org/dist/Proc-Simple/
 BuildRequires:	perl-devel >= 1:5.8.0
